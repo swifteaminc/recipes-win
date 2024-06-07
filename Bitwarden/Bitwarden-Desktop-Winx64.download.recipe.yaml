@@ -1,6 +1,6 @@
 Description: Download recipe for Bitwarden Desktop x64.
 # based upon: https://github.com/autopkg/NickETH-recipes/blob/master/Bitwarden/Bitwarden-Desktop-Win64.download.recipe.yaml
-Identifier: github.com.swifteaminc.recipes.download.Bitwarden-Desktop-Win64
+Identifier: github.com.swifteaminc.recipes.download.Bitwarden-Desktop-Winx64
 MinimumVersion: 1.3.1
 
 Input:
