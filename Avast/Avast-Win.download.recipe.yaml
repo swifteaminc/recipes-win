@@ -1,9 +1,9 @@
 Description: Downloads Avast Antivirus for Windows.
-Identifier: github.com.swifteaminc.recipes.download.Avast-Antivirus-Win
+Identifier: github.com.swifteaminc.recipes.download.Avast-Win
 MinimumVersion: 1.3.1
 
 Input:
-  NAME: Avast-Antivirus
+  NAME: Avast
   DOWNLOAD_URL: https://www.avast.com/download-thank-you.php?product=FAV-ONLINE-W10-160535-TC&locale=en-ww&direct=1
 
 Process:
