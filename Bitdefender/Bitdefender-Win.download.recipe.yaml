@@ -1,0 +1,18 @@
+
+Description: Downloads Bitdefender Antivirus for Windows.
+Identifier: github.com.swifteaminc.recipes.download.Bitdefender-Antivirus-Win
+MinimumVersion: 1.3.1
+
+Input:
+  NAME: Bitdefender Antivirus
+  DOWNLOAD_URL: https://download.bitdefender.com/windows/installer/en-us/bitdefender_avfree.exe
+
+Process:
+- Processor: URLDownloader
+  Arguments:
+    filename: bitdefender_avfree.exe
+    url: '%DOWNLOAD_URL%'
+
+- Processor: StopProcessingIf
+  Arguments:
+    predicate: download_changed == False
