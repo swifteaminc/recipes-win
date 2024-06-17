@@ -9,8 +9,10 @@ Input:
 Process:
 - Processor: URLDownloader
   Arguments:
-    filename: SlackSetup.exe
-    url: '%DOWNLOAD_URL%'
+    CHECK_FILESIZE_ONLY: false
+    filename: 'SlackSetup.exe'
+    #https://downloads.slack-edge.com/desktop-releases/windows/x64/4.39.88/SlackSetup.exe
+    url: https://downloads.slack-edge.com/desktop-releases/windows/x64/%ver3digit%/SlackSetup.exe
 
 - Processor: StopProcessingIf
   Arguments:
