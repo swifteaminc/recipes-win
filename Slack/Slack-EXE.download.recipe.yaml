@@ -3,10 +3,16 @@ Identifier: github.com.swifteaminc.recipes.download.Slack-EXE
 MinimumVersion: 1.3.1
 
 Input:
-  NAME: Notion
-  DOWNLOAD_URL: https://slack.com/downloads/instructions/windows?ddl=1&build=win64
+  NAME: Slack
+  SEARCH_URL_EXE: (?P<msi_dl_link>https://downloads\.slack-edge\.com/releases/windows/(?P<ver3digit>[0-9]+\.[0-9]+\.[0-9]+)/prod/x64/SlackSetup.exe)
+  DOWNLOAD_FILE: Slack
 
 Process:
+- Processor: URLTextSearcher
+  Arguments:
+    re_pattern: '%SEARCH_URL_EXE%'
+    url: https://slack.com/intl/en-ch/release-notes/windows/rss
+
 - Processor: URLDownloader
   Arguments:
     CHECK_FILESIZE_ONLY: false
