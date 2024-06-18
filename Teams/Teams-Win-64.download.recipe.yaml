@@ -1,0 +1,17 @@
+Description: Downloads Teams for Windows.
+Identifier: github.com.swifteaminc.recipes.download.Teams-Win-64
+MinimumVersion: 1.3.1
+
+Input:
+  NAME: Teams
+  DOWNLOAD_URL: https://go.microsoft.com/fwlink/?linkid=2187217&clcid=0x409&culture=en-us&country=us
+
+Process:
+- Processor: URLDownloader
+  Arguments:
+    filename: MSTeamsSetup_c_l_.exe
+    url: '%DOWNLOAD_URL%'
+
+- Processor: StopProcessingIf
+  Arguments:
+    predicate: download_changed == False
